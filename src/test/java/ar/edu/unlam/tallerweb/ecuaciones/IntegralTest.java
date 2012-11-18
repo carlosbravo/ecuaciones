@@ -24,8 +24,23 @@ public class IntegralTest {
 		Double precision = 0.01;
 		Double areaEsperada = 0.5;
 		assertEquals(
-				"Se espera que el área bajo la recta identidad entre 0 y 1 sea 1/2",
+				"Se espera que el area bajo la recta identidad entre 0 y 1 sea 1/2",
 				areaEsperada, areaObtenida.doubleValue(), precision);
+		
+		
+		//El mismo test de arriba con otros valores
+		/*Ecuacion ecuacion = new EcuacionLineal(1.0000, 2.0000);
+
+		IntegralDeArea integral = new IntegralDeArea();
+		Double incremento = 1.00000;
+		Double areaObtenida = integral.calcular(ecuacion, 1.0000, 3.0000, incremento);
+
+		
+		Double precision = 0.01;
+		Double areaEsperada = 8.0000;
+		assertEquals(
+				"Se espera que el area bajo la recta identidad entre 0 y 1 sea 1/2",
+				areaEsperada, areaObtenida.doubleValue(), precision);*/
 
 	}
 
