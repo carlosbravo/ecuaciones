@@ -3,10 +3,10 @@ public class EcuacionCuadratica implements Ecuacion {
 	private Double a;
 	private Double b;
 	private Double c;
-	public final Double getA() {
+	public Double getA() {
 		return a;
 	}
-	public final void setA(final Double a) {
+	public void setA(final Double a) {
 		this.a = a;
 	}
 	public final Double getB() {
@@ -21,7 +21,8 @@ public class EcuacionCuadratica implements Ecuacion {
 	public final void setC(final Double c) {
 		this.c = c;
 	}
-	public EcuacionCuadratica(final Double a, final Double b, final Double c) {
+	public EcuacionCuadratica(Double a,
+			final Double b, final Double c) {
 		if ((a == null) || (b == null) || (c == null)) {
 			throw new RuntimeException("No implementado");
 		} else {

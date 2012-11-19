@@ -3,13 +3,13 @@ import java.util.ArrayList;
 import java.util.List;
 public class EcuacionPolinomica implements Ecuacion {
 	List <Double> coeficientes = new ArrayList <Double>();
-	public final List<Double> getCoeficientes() {
+	public final List <Double> getCoeficientes() {
 		return coeficientes;
 	}
-	public final void setCoeficientes(final List<Double> coeficientes) {
+	public final void setCoeficientes(final List <Double> coeficientes) {
 		this.coeficientes = coeficientes;
 	}
-	public EcuacionPolinomica(final List<Double> coeficientes) {
+	public EcuacionPolinomica(final List <Double> coeficientes) {
 		if (coeficientes == null) {
 			throw new RuntimeException("No implementado");
 		} else {

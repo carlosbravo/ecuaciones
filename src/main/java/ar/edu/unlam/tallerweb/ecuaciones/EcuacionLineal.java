@@ -24,7 +24,7 @@ public class EcuacionLineal implements Ecuacion {
 	}
 	public final Double resolver(final Double x) {		
 		double resultado;
-		resultado=(this.m * x) + this.b;
+		resultado = (this.m * x) + this.b;
 		return resultado;
 	}
 }
