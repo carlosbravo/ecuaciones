@@ -39,13 +39,17 @@ public class EcuacionPolinomica implements Ecuacion {
 	 * f(x) = 1 x^0 + 0 x^1 + 2 x^2 + 1 x^3 - 1 x^4
 	 *
 	 */
+	
+	
 	public EcuacionPolinomica(List<Double> coeficientes) {
-
-		this.coeficientes=coeficientes;
-		
-		//throw new RuntimeException("No implementado");
-
+		if (coeficientes == null) {
+			throw new RuntimeException("No implementado");
+		} else {
+			this.coeficientes = coeficientes;
+		}
 	}
+
+	
 
 	/**
 	 * Devuelve el resultado de evaluar f(x)
@@ -61,8 +65,8 @@ public class EcuacionPolinomica implements Ecuacion {
 		int exponente=(this.coeficientes.size())-1;
 		while(i.hasNext())
 		{
-			elemento=(Double)(i.next());//hay que castear lo que trae el iterador, porque por defecto es un Object
-			resultado+=elemento*(Math.pow(x, exponente));
+			elemento=(Double)(i.next()); //hay que castear lo que trae el iterador, porque por defecto es un Object
+			resultado += elemento*(Math.pow(x, exponente));
 			exponente--;
 		}
 		

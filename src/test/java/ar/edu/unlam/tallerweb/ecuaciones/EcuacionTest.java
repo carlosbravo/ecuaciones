@@ -108,12 +108,12 @@ public class EcuacionTest {
 	public void testEcuacionPolinomica()
 	{
 		Double resultObtenido;
-		Double resultEsperado=44.0;//3x^3+2x^2+5x^1+2x^0;
+		Double resultEsperado=15.0;//3x^3+2x^2+5x^1+2x^0;
 		List<Double> listaDeCoeficientes = new ArrayList<Double>();
+		listaDeCoeficientes.add(2.0);
 		listaDeCoeficientes.add(3.0);
-		listaDeCoeficientes.add(2.0);
-		listaDeCoeficientes.add(5.0);
-		listaDeCoeficientes.add(2.0);
+		listaDeCoeficientes.add(1.0);
+		//listaDeCoeficientes.add(2.0);
 		
 		EcuacionPolinomica polinomica= new EcuacionPolinomica(listaDeCoeficientes);
 		resultObtenido=polinomica.resolver(2.0);//Donde x=2

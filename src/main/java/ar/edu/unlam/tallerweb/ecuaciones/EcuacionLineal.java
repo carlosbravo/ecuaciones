@@ -33,12 +33,16 @@ public class EcuacionLineal implements Ecuacion {
 	 * @param b la ordenada al origen
 	 *
 	 */
+	
 	public EcuacionLineal(Double m, Double b) {
-		this.m = m;
-		this.b = b;
-		//throw new RuntimeException("No implementado");
+		if ((m == null) || (b == null)) {
+			throw new RuntimeException("No implementado");
+		} else {
+			this.m = m;
+			this.b = b;
+		}
 	}
-
+	
 	/**
 	 * Devuelve el resultado de evaluar f(x)
 	 *

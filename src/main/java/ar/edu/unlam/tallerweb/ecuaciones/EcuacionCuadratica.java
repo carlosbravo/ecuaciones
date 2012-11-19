@@ -44,12 +44,15 @@ public class EcuacionCuadratica implements Ecuacion {
 	 * @param c
 	 *
 	 */
+	
 	public EcuacionCuadratica(Double a, Double b, Double c) {
-		this.a=a;
-		this.b=b;
-		this.c=c;
-		//throw new RuntimeException("No implementado");
-
+		if ((a == null) || (b == null) || (c == null)) {
+			throw new RuntimeException("No implementado");
+		} else {
+			this.a = a;
+			this.b = b;
+			this.c = c;
+		}
 	}
 
 	/**
@@ -61,10 +64,9 @@ public class EcuacionCuadratica implements Ecuacion {
 	public Double resolver(Double x) {
 
 		Double resultado;
-		resultado=(this.a*(x*x))+(this.b*x)+this.c;//x*x representa x al cuadrado: x^2
+		resultado=(this.a * (x * x)) + (this.b * x) + this.c;//x*x representa x al cuadrado: x^2
 		return resultado;
 		//throw new RuntimeException("No implementado");
 
 	}
-
 }

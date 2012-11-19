@@ -29,7 +29,7 @@ public class IntegralDeArea {
 		
 		for (i = 0; i<cant_rectangulos; i++) 
 		{
-			area_rectangulo = base * (ecuacion.resolver(inicio+(base/2)));
+			area_rectangulo =  Math.abs (base * (ecuacion.resolver(inicio+(base/2))));
 			resultado+=area_rectangulo;
 			inicio+=incremento;
 		}
