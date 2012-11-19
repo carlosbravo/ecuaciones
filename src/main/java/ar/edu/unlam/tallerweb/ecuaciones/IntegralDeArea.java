@@ -20,24 +20,27 @@ public class IntegralDeArea {
 	public Double calcular(Ecuacion ecuacion, Double inicio, Double fin, Double incremento) 
 	{
 		
+		if (inicio>fin) {
+			throw new RuntimeException("El inicio no puede ser mayor que el fin");
+		} else {
 		
-		Double resultado = 0.0;
-		Double cant_rectangulos = (fin - inicio) / incremento;
-		Double area_rectangulo;
-		Double base=incremento;
-		int i=0;
-		
-		for (i = 0; i<cant_rectangulos; i++) 
-		{
-			area_rectangulo =  Math.abs (base * (ecuacion.resolver(inicio+(base/2))));
-			resultado+=area_rectangulo;
-			inicio+=incremento;
+			Double resultado = 0.0;
+			Double cant_rectangulos = (fin - inicio) / incremento;
+			Double area_rectangulo;
+			Double base=incremento;
+			int i=0;
+			
+			for (i = 0; i<cant_rectangulos; i++) 
+			{
+				area_rectangulo =  Math.abs (base * (ecuacion.resolver(inicio+(base/2))));
+				resultado+=area_rectangulo;
+				inicio+=incremento;
+			}
+			
+			System.out.printf("valor de i: "+i);
+			System.out.printf("Resultado: "+resultado);
+			return resultado;
 		}
-		
-		System.out.printf("valor de i: "+i);
-		System.out.printf("Resultado: "+resultado);
-		return resultado;
-		
 		
 		//throw new RuntimeException("No implementado");
 

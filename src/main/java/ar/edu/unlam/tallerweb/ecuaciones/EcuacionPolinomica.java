@@ -72,7 +72,7 @@ public class EcuacionPolinomica implements Ecuacion {
 		
 	}*/
 	
-	public Double resolver(Double x) {
+	/*public Double resolver(Double x) {
 		int exponente;
 		double resultado = 0.0;
 		exponente=(this.coeficientes.size())-1;
@@ -81,6 +81,14 @@ public class EcuacionPolinomica implements Ecuacion {
 			System.out.printf("valor "+j+" "+ this.coeficientes.get(j) +"\n");
 			resultado += this.coeficientes.get(j) * Math.pow(x, i);
 			j++;
+		}
+		return resultado;
+	}*/
+	
+	public Double resolver(Double x) {
+		double resultado = 0;
+		for (int i = 0; i < this.coeficientes.size(); i++) {
+			resultado += this.coeficientes.get(i) * Math.pow(x, i);
 		}
 		return resultado;
 	}
