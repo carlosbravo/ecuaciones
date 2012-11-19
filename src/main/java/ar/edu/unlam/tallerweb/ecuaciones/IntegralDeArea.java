@@ -17,7 +17,7 @@ public class IntegralDeArea {
 	 * @param incremento
 	 * @return el area bajo la curva
 	 */
-	public Double calcular(Ecuacion ecuacion, Double inicio, Double fin, Double incremento) 
+	public final Double calcular(final Ecuacion ecuacion, Double inicio, final Double fin, final Double incremento) 
 	{
 		
 		if (inicio>fin) {

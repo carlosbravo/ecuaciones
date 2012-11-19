@@ -10,19 +10,19 @@ public class EcuacionLineal implements Ecuacion {
 	private Double b;
 	
 	//Genero los getters y setters
-	public Double getM() {
+	public final Double getM() {
 		return m;
 	}
 
-	public void setM(Double m) {
+	public final void setM(final Double m) {
 		this.m = m;
 	}
 
-	public Double getB() {
+	public final Double getB() {
 		return b;
 	}
 
-	public void setB(Double b) {
+	public final void setB(final Double b) {
 		this.b = b;
 	}
 
@@ -34,7 +34,7 @@ public class EcuacionLineal implements Ecuacion {
 	 *
 	 */
 	
-	public EcuacionLineal(Double m, Double b) {
+	public EcuacionLineal(final Double m, final Double b) {
 		if ((m == null) || (b == null)) {
 			throw new RuntimeException("No implementado");
 		} else {
@@ -49,7 +49,7 @@ public class EcuacionLineal implements Ecuacion {
 	 * @param x la variable
 	 *
 	 */
-	public Double resolver(Double x) {
+	public final Double resolver(final Double x) {
 		
 		double resultado;
 		resultado=(this.m*x)+this.b;

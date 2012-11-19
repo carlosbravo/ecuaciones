@@ -19,7 +19,7 @@ public class EcuacionTest {
 	//TESTS PARA LA ECUACION LINEAL
 	
 	@Test
-	public void crearNuevaEcuacionLineal()
+	public final void crearNuevaEcuacionLineal()
 	{
 		Double m=2.0;
 		Double b=3.0;
@@ -31,7 +31,7 @@ public class EcuacionTest {
 	}
 	
 	@Test
-	public void testEcuacionLineal() 
+	public final void testEcuacionLineal() 
 	{
 		Double resultObtenido;
 		Double resultEsperado=11.0;//2x+3
@@ -46,7 +46,7 @@ public class EcuacionTest {
 	
 	//TESTS PARA LA ECUACION CUADRATICA
 	@Test
-	public void crearNuevaEcuacionCuadratica()
+	public final void crearNuevaEcuacionCuadratica()
 	{
 		Double a=3.0;
 		Double b=5.0;
@@ -62,7 +62,7 @@ public class EcuacionTest {
 	}
 	
 	@Test
-	public void testEcuacionCuadratica()
+	public final void testEcuacionCuadratica()
 	{
 		Double resultObtenido;
 		Double resultEsperado=56.0;//3x^2+5x+7
@@ -77,7 +77,7 @@ public class EcuacionTest {
 	//TESTS PARA LA ECUACION POLINOMICA
 	
 	@Test
-	public void crearNuevaEcuacionPolinomica()
+	public final void crearNuevaEcuacionPolinomica()
 	{
 		Double elementoActual,elementoRecibido;
 
@@ -105,7 +105,7 @@ public class EcuacionTest {
 	}
 	
 	@Test
-	public void testEcuacionPolinomica()
+	public final void testEcuacionPolinomica()
 	{
 		Double resultObtenido;
 		Double resultEsperado=53.0;//ej:3x^3+2x^2+5x^1+2x^0;

@@ -13,11 +13,11 @@ public class EcuacionPolinomica implements Ecuacion {
 
 	List <Double> coeficientes = new ArrayList <Double>();
 	//Genero los getters y setters
-	public List<Double> getCoeficientes() {
+	public final List<Double> getCoeficientes() {
 		return coeficientes;
 	}
 
-	public void setCoeficientes(List<Double> coeficientes) {
+	public final void setCoeficientes(final List<Double> coeficientes) {
 		this.coeficientes = coeficientes;
 	}
 
@@ -38,7 +38,7 @@ public class EcuacionPolinomica implements Ecuacion {
 	 * f(x) = 1 x^0 + 0 x^1 + 2 x^2 + 1 x^3 - 1 x^4
 	 *
 	 */
-	public EcuacionPolinomica(List<Double> coeficientes) {
+	public EcuacionPolinomica(final List<Double> coeficientes) {
 		if (coeficientes == null) {
 			throw new RuntimeException("No implementado");
 		} else {
@@ -85,7 +85,7 @@ public class EcuacionPolinomica implements Ecuacion {
 		return resultado;
 	}*/
 	
-	public Double resolver(Double x) {
+	public Double resolver(final Double x) {
 		double resultado = 0;
 		for (int i = 0; i < this.coeficientes.size(); i++) {
 			resultado += this.coeficientes.get(i) * Math.pow(x, i);

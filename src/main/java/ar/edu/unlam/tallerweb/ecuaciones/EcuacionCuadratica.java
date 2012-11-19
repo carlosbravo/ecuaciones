@@ -12,27 +12,27 @@ public class EcuacionCuadratica implements Ecuacion {
 	private Double c;
 	
 	//Genero los getters y setters
-	public Double getA() {
+	public final Double getA() {
 		return a;
 	}
 
-	public void setA(Double a) {
+	public final void setA(final Double a) {
 		this.a = a;
 	}
 
-	public Double getB() {
+	public final Double getB() {
 		return b;
 	}
 
-	public void setB(Double b) {
+	public final void setB(final Double b) {
 		this.b = b;
 	}
 
-	public Double getC() {
+	public final Double getC() {
 		return c;
 	}
 
-	public void setC(Double c) {
+	public final void setC(final Double c) {
 		this.c = c;
 	}
 
@@ -45,7 +45,7 @@ public class EcuacionCuadratica implements Ecuacion {
 	 *
 	 */
 	
-	public EcuacionCuadratica(Double a, Double b, Double c) {
+	public EcuacionCuadratica(final Double a, final Double b, final Double c) {
 		if ((a == null) || (b == null) || (c == null)) {
 			throw new RuntimeException("No implementado");
 		} else {
@@ -61,7 +61,7 @@ public class EcuacionCuadratica implements Ecuacion {
 	 * @param x la variable
 	 *
 	 */
-	public Double resolver(Double x) {
+	public final Double resolver(final Double x) {
 
 		Double resultado;
 		resultado=(this.a * (x * x)) + (this.b * x) + this.c;//x*x representa x al cuadrado: x^2

@@ -8,7 +8,8 @@ package ar.edu.unlam.tallerweb.ecuaciones;
 public interface Ecuacion {
 
 	/**
-	 * Nota recordatoria: La interfaz solo contiene la firma de los metodos, no la implementacion
+	 * Nota recordatoria: La interfaz solo contiene la firma de los metodos,
+	 * no la implementacion
 	 * 
 	 * Devuelve el resultado de evaluar f(x)
 	 *

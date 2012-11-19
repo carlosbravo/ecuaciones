@@ -12,7 +12,7 @@ import org.junit.Test;
 public class IntegralTest {
 
 	@Test
-	public void areaBajoLaIdentidad() {
+	public final void areaBajoLaIdentidad() {
 
 		Ecuacion ecuacion = new EcuacionLineal(1.0, 0.0);
 
