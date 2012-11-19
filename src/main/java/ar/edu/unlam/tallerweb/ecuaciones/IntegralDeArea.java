@@ -12,7 +12,7 @@ public class IntegralDeArea {
 			Double comienzo = inicio;
 			int i = 0;
 			for (i = 0; i < cantRectangulos; i++) {
-				areaRectangulo =  Math.abs ( base * ( ecuacion.resolver( comienzo + ( base / 2 ))));
+				areaRectangulo =  Math.abs ( base * ( ecuacion.resolver ( comienzo + ( base / 2 ) ) ) );
 				resultado += areaRectangulo;
 				comienzo += incremento;
 			}

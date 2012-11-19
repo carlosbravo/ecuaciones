@@ -6,7 +6,7 @@ public class EcuacionCuadratica implements Ecuacion {
 	public Double getA() {
 		return a;
 	}
-	public void setA(final Double a) {
+	public void setA(Double a) {
 		this.a = a;
 	}
 	public final Double getB() {
