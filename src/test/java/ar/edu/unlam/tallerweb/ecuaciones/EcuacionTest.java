@@ -65,11 +65,11 @@ public class EcuacionTest {
 	public void testEcuacionCuadratica()
 	{
 		Double resultObtenido;
-		Double resultEsperado=29.0;//3x^2+5x+7
-		EcuacionCuadratica cuadratica = new EcuacionCuadratica(3.0,5.0,7.0);
-		resultObtenido=cuadratica.resolver(2.0);//Donde x=2
+		Double resultEsperado=56.0;//3x^2+5x+7
+		EcuacionCuadratica cuadratica = new EcuacionCuadratica(3.0,8.0,5.0);
+		resultObtenido=cuadratica.resolver(3.0);//Donde x=2
 		Assert.assertEquals(resultEsperado,resultObtenido);
-		System.out.printf("El resultado de la operacion es: " + resultObtenido + " y el esperado es: " + resultEsperado + "\n");
+		System.out.printf("El resultado de la operacion cuadratica es: " + resultObtenido + " y el esperado es: " + resultEsperado + "\n");
 	}
 	
 	//FINALIZAN LOS TESTS DE LA ECUACION CUADRATICA
@@ -84,9 +84,9 @@ public class EcuacionTest {
 		List<Double> listaRecibida = new ArrayList<Double>();//Va almacenar la lista que reciba del getter getCoeficientes de la clase EcuacionPolinomica		
 		List<Double> listaDeCoeficientes = new ArrayList<Double>();
 		
-		listaDeCoeficientes.add(7.0);
-		listaDeCoeficientes.add(5.0);
-		listaDeCoeficientes.add(3.0);
+		listaDeCoeficientes.add(9.0);
+		listaDeCoeficientes.add(6.0);
+		listaDeCoeficientes.add(0.0);
 		
 		EcuacionPolinomica polinomica = new EcuacionPolinomica(listaDeCoeficientes);
 		
@@ -108,15 +108,16 @@ public class EcuacionTest {
 	public void testEcuacionPolinomica()
 	{
 		Double resultObtenido;
-		Double resultEsperado=15.0;//3x^3+2x^2+5x^1+2x^0;
+		Double resultEsperado=53.0;//ej:3x^3+2x^2+5x^1+2x^0;
 		List<Double> listaDeCoeficientes = new ArrayList<Double>();
-		listaDeCoeficientes.add(2.0);
-		listaDeCoeficientes.add(3.0);
-		listaDeCoeficientes.add(1.0);
-		//listaDeCoeficientes.add(2.0);
+		listaDeCoeficientes.add(5.0);
+		listaDeCoeficientes.add(0.0);
+		listaDeCoeficientes.add(8.0);
+		//listaDeCoeficientes.add(3.0);
+		//listaDeCoeficientes.add(1.0);
 		
 		EcuacionPolinomica polinomica= new EcuacionPolinomica(listaDeCoeficientes);
-		resultObtenido=polinomica.resolver(2.0);//Donde x=2
+		resultObtenido=polinomica.resolver(3.0);
 		Assert.assertEquals(resultEsperado,resultObtenido);
 		System.out.printf("El resultado de la operacion es: " + resultObtenido + " y el esperado es: " + resultEsperado + "\n");
 	}
